@@ -99,7 +99,7 @@ export default function Header() {
                     : "bg-yellow-500 text-white hover:bg-yellow-600"
                   : theme === "light"
                     ? "text-black"
-                    : "text-white"
+                    : "text-yellow-400"
                   }`}>
                 {item}
               </a>
@@ -123,7 +123,7 @@ export default function Header() {
               {theme === "light" ? (
                 <FaMoon className="text-black" />
               ) : (
-                <FaSun className="text-white" />
+                <FaSun className="text-yellow-400" />
               )}
             </button>
           </div>
