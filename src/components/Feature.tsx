@@ -25,7 +25,7 @@ export default function Feature() {
   ];
 
   return (
-    <section id="feature" className={`py-10 md:py-20 transition-colors duration-300 ${theme === "dark" ? "bg-[#202020]" : "bg-[#f3f3f3]"}`}>
+    <section id="feature" className={`py-10 md:py-20 transition-colors duration-300 ${theme === "dark" ? "bg-[#202020]" : "bg-[#ffffff]"}`}>
       <div className="container px-4 sm:px-6 md:px-20">
         <div className="text-center mb-12">
           <h2 className={`text-2xl xs:text-3xl sm:text-4xl font-bold ${isDark ? "text-white" : "text-gray-900"}`}>

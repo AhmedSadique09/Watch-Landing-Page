@@ -6,7 +6,7 @@ export default function Hero() {
   const { theme } = useSelector((state: RootState) => state.theme);
 
   return (
-    <section id="home" className={`min-h-screen py-20 md:py-25 flex items-center justify-center px-4 transition-colors duration-300 ${theme === "dark" ? "bg-[#1C1C1C]" : "bg-[#f8f1e9]"}`}>
+    <section id="home" className={`min-h-screen py-20 md:py-25 flex items-center justify-center px-4 transition-colors duration-300 ${theme === "dark" ? "bg-[#1C1C1C]" : "bg-[#f7f7f7]"}`}>
       <div className="container px-4 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4">
         {/* Left Section */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-6 px-1 md:pl-20">

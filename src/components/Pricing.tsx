@@ -25,7 +25,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className={`transition-colors duration-300 px-4 sm:px-8 ${theme === "light" ? "bg-white text-black" : "bg-[#1C1C1C] text-white"}`}>
+    <section id="pricing" className={`transition-colors duration-300 px-4 sm:px-8 ${theme === "light" ? "bg-[#f7f7f7] text-black" : "bg-[#1C1C1C] text-white"}`}>
       <div className="container py-10 md:py-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold">We Have Quality Products</h2>

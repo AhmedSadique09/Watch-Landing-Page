@@ -8,7 +8,7 @@ export default function WatchSaleBanner() {
     return (
         <section
             id="watch-sale-banner"
-            className={`${theme === "dark" ? "bg-[#202020]" : "bg-[#f3f3f3]"} px-4 sm:px-8 relative`}>
+            className={`${theme === "dark" ? "bg-[#202020]" : "bg-[#ffffff]"} px-4 sm:px-8 relative`}>
             <div className="container py-16">
                 <div className="flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
                     {/* Left section */}

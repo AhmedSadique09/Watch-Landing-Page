@@ -62,12 +62,9 @@ export default function Reviews() {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section ref={ref} id="reviews" className="px-4 sm:px-8 py-10 md:py-20">
+    <section ref={ref} id="reviews" className={`px-4 sm:px-8 py-10 md:py-20 ${theme === "dark" ? "bg-[#202020]" : "bg-[#f7f7f7]"}`}>
       <div className="container mx-auto">
-        <h2 className={`text-3xl sm:text-4xl font-bold mb-8  text-center ${theme === "light"
-          ? "from-[#202016] to-gray-900"
-          : "from-white to-gray-300"
-          }`}>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8  text-center">
           What Our Customers Saying
         </h2>
 
