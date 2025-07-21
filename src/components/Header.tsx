@@ -139,7 +139,12 @@ export default function Header() {
                   }`}
                 aria-label="Toggle theme"
               >
-                {theme === "light" ? <FaMoon /> : <FaSun />}
+                {theme === "light" ? (
+                  <FaMoon />
+                ) : (
+                  <FaSun className="text-yellow-400" />
+                )}
+
               </button>
 
               <button
