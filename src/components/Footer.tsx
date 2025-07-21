@@ -7,7 +7,7 @@ export default function Footer() {
 
   const bgColor =
     theme === "dark"
-      ? "bg-black text-gray-300"
+      ? "bg-[#18181b] text-gray-300"
       : "bg-[#ffffff] text-gray-700";
 
   const headingColor = theme === "dark" ? "text-white" : "text-black";
