@@ -34,6 +34,7 @@ export default function Hero() {
             src="/images/black watch.png"
             alt="watch"
             className="absolute inset-0 m-auto w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 xl:w-72 xl:h-72 object-contain z-10 transition-transform duration-500 hover:scale-105"
+            loading="lazy"
           />
         </div>
 

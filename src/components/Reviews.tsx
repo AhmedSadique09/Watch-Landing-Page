@@ -92,6 +92,7 @@ export default function Reviews() {
                         src={t.image}
                         alt={t.name}
                         className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover mr-2 sm:mr-3"
+                        loading="lazy"
                       />
                       <div>
                         <h3 className="text-sm sm:text-base font-semibold">

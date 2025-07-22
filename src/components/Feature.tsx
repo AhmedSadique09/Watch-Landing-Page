@@ -43,6 +43,7 @@ export default function Feature() {
               src="/images/feature watch.png"
               alt="Smart Watch"
               className="w-full h-auto object-contain"
+              loading="lazy"
             />
           </div>
 

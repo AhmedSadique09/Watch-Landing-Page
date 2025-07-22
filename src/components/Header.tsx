@@ -99,7 +99,7 @@ export default function Header() {
                     : "bg-yellow-500 text-white hover:bg-yellow-600"
                   : theme === "light"
                     ? "text-black"
-                    : "text-yellow-400"
+                    : "text-white"
                   }`}>
                 {item}
               </a>

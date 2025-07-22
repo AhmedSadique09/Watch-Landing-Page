@@ -36,6 +36,7 @@ export default function WatchSaleBanner() {
                         <img
                             src="/images/all watch.png"
                             alt="Watch"
+                            loading="lazy"
                             className="w-[280px] sm:w-[300px] md:w-[350px] lg:w-[700px] opacity-80"
                         />
                     </div>

@@ -49,6 +49,7 @@ export default function Pricing() {
                   src={watch.img}
                   alt={`Smart Watch (${watch.color})`}
                   className="h-48 object-contain relative z-10"
+                  loading="lazy"
                 />
               </div>
 
