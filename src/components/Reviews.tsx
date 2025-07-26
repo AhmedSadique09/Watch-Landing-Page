@@ -62,16 +62,22 @@ export default function Reviews() {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section ref={ref} id="reviews" className={`px-4 sm:px-8 py-10 md:py-20 ${theme === "dark" ? "bg-[#202020]" : "bg-[#f7f7f7]"}`}>
+    <section
+      ref={ref}
+      id="reviews"
+      className={`px-2 sm:px-4 md:px-6 py-10 md:py-20 ${
+        theme === "dark" ? "bg-[#202020]" : "bg-[#f7f7f7]"
+      }`}
+    >
       <div className="container mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-8  text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center">
           What Our Customers Saying
         </h2>
 
         <div className="relative w-full overflow-hidden">
           {isInView && (
             <motion.div
-              className="flex gap-4 sm:gap-6 w-max"
+              className="flex gap-2 sm:gap-5 w-max"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 80,
@@ -81,10 +87,12 @@ export default function Reviews() {
             >
               {loopTestimonials.map((t, index) => (
                 <div
-                  key={`${t.name}-${index}`} className={`w-[85vw] sm:w-[250px] md:w-[350px] flex-shrink-0 p-4 sm:p-5 rounded-2xl shadow-md ${theme === "light"
-                    ? "bg-[#ffffff] text-black border border-gray-400 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
-                    : "bg-[#202024] text-white border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.1)]"
-                    }`}
+                  key={`${t.name}-${index}`}
+                  className={`w-[100vw] sm:w-[240px] md:w-[320px] flex-shrink-0 p-4 sm:p-5 rounded-2xl shadow-md ${
+                    theme === "light"
+                      ? "bg-[#ffffff] text-black border border-gray-400 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
+                      : "bg-[#202024] text-white border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.1)]"
+                  }`}
                 >
                   <div>
                     <div className="flex items-center mb-2 sm:mb-3">
@@ -99,8 +107,12 @@ export default function Reviews() {
                           {t.name}
                         </h3>
                         <p
-                          className={`text-[10px] sm:text-xs ${theme === "light" ? "text-gray-700" : "text-gray-400"
-                            }`}>
+                          className={`text-[10px] sm:text-xs ${
+                            theme === "light"
+                              ? "text-gray-700"
+                              : "text-gray-400"
+                          }`}
+                        >
                           {t.company}
                         </p>
                       </div>
@@ -109,8 +121,10 @@ export default function Reviews() {
                       {"★".repeat(t.rating)}
                     </div>
                     <p
-                      className={`text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed whitespace-pre-line ${theme === "light" ? "text-gray-800" : "text-gray-300"
-                        }`}>
+                      className={`text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed whitespace-pre-line ${
+                        theme === "light" ? "text-gray-800" : "text-gray-300"
+                      }`}
+                    >
                       {t.quote}
                     </p>
                   </div>

@@ -13,9 +13,19 @@ export default function Footer() {
   const headingColor = theme === "dark" ? "text-white" : "text-black";
   const iconColor = "text-yellow-400";
 
+  const sections = [
+    { title: "Company", links: ["About Us", "Our Team", "Products", "Contact"] },
+    { title: "Product", links: ["Feature", "Pricing", "Credit", "FAQ"] },
+    { title: "Our Store", links: ["New York", "London-SF", "Cockfosters BP", "Los Angeles"] },
+    { title: "Support", links: ["Privacy", "Help", "Terms", "FAQ"] },
+  ];
+
   return (
-    <footer id="footer" className={`${bgColor} py-12 px-4 sm:px-6 lg:px-8`}>
-      <div className="container grid grid-cols-1 lg:grid-cols-5 gap-10">
+    <footer
+      id="footer"
+      className={`${bgColor} py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden`}
+    >
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10">
         {/* Logo & Description */}
         <div className="lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex items-center mb-4">
@@ -66,44 +76,58 @@ export default function Footer() {
         </div>
 
         {/* Footer Columns */}
-        <div className="lg:col-span-3 flex flex-col sm:flex-row flex-wrap justify-between gap-8">
-          {[
-            {
-              title: "Company",
-              links: ["About Us", "Our Team", "Products", "Contact"],
-            },
-            {
-              title: "Product",
-              links: ["Feature", "Pricing", "Credit", "FAQ"],
-            },
-            {
-              title: "Our Store",
-              links: ["New York", "London-SF", "Cockfosters BP", "Los Angeles"],
-            },
-            {
-              title: "Support",
-              links: ["Privacy", "Help", "Terms", "FAQ"],
-            },
-          ].map((section) => (
-            <div
-              key={section.title}
-              className="flex flex-col items-center sm:items-start text-center sm:text-left min-w-[140px]">
-              <h3 className={`font-semibold mb-4 ${headingColor}`}>
-                {section.title}
-              </h3>
-              <ul className="space-y-2 text-sm">
-                {section.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="hover:text-yellow-500 transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="lg:col-span-3 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between gap-8">
+          {/* Mobile: Row 1 (Company + Product) */}
+          <div className="flex justify-center gap-6 w-full sm:w-auto flex-1">
+            {sections.slice(0, 2).map((section) => (
+              <div
+                key={section.title}
+                className="flex-1 min-w-0 flex flex-col items-center sm:items-start text-center sm:text-left"
+              >
+                <h3 className={`font-semibold mb-4 ${headingColor}`}>
+                  {section.title}
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  {section.links.map((link) => (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="hover:text-yellow-500 transition-colors"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: Row 2 (Store + Support) */}
+          <div className="flex justify-center gap-6 w-full sm:w-auto flex-1">
+            {sections.slice(2).map((section) => (
+              <div
+                key={section.title}
+                className="flex-1 min-w-0 flex flex-col items-center sm:items-start text-center sm:text-left"
+              >
+                <h3 className={`font-semibold mb-4 ${headingColor}`}>
+                  {section.title}
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  {section.links.map((link) => (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="hover:text-yellow-500 transition-colors"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
